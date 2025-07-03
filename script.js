@@ -76,14 +76,20 @@ filterBtns.forEach(btn => {
     });
 });
 
-// Contact Form
+// Contact Form Handling with FormSubmit
 document.getElementById('eventInquiryForm')?.addEventListener('submit', function(e) {
     e.preventDefault();
+    
+    // Show loading state
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
     
     // Get form data
     const formData = new FormData(this);
     
-    // In a real implementation, you would send the form data to a server here
+    // Using FormSubmit.co for form handling
     fetch(this.action, {
         method: 'POST',
         body: formData,
@@ -102,6 +108,8 @@ document.getElementById('eventInquiryForm')?.addEventListener('submit', function
                 document.getElementById('eventInquiryForm').reset();
                 document.getElementById('eventInquiryForm').style.display = 'block';
                 document.getElementById('formSuccess').style.display = 'none';
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
             }, 5000);
         } else {
             throw new Error('Network response was not ok');
@@ -109,6 +117,11 @@ document.getElementById('eventInquiryForm')?.addEventListener('submit', function
     })
     .catch(error => {
         console.error('Error:', error);
+        submitBtn.innerHTML = 'Error - Try Again';
+        setTimeout(() => {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+        }, 2000);
     });
 });
 
