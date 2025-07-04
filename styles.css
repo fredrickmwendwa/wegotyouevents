@@ -516,12 +516,6 @@ header.scrolled {
     text-align: center;
 }
 
-/* Team Preview */
-.team-preview-content {
-    display: flex;
-    justify-content: center;
-}
-
 /* Services Section */
 .services-grid {
     display: grid;
@@ -607,6 +601,25 @@ header.scrolled {
 
 .service-card:hover .service-badge {
     transform: scale(1.1) rotate(15deg);
+}
+
+.service-features {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.service-features li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.service-features li::before {
+    content: '•';
+    color: var(--primary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
 /* Portfolio Section */
