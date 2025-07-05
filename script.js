@@ -33,7 +33,7 @@ const animateOnScroll = () => {
         });
     }, {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -100px 0px'
     });
 
     elements.forEach(element => {
@@ -67,7 +67,7 @@ filterBtns.forEach(btn => {
                 }, 50);
             } else {
                 item.style.opacity = '0';
-                item.style.transform = 'translateY(30px)';
+                item.style.transform = 'translateY(50px)';
                 setTimeout(() => {
                     item.style.display = 'none';
                 }, 300);
@@ -160,6 +160,9 @@ if (heroVideo) {
         heroVideo.muted = !heroVideo.muted;
     });
 }
+
+// Set current year in footer
+document.getElementById('currentYear').textContent = new Date().getFullYear();
 
 // Initialize animations on page load
 document.addEventListener('DOMContentLoaded', () => {
