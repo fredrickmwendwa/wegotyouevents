@@ -3,62 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | WE GOT YOU EVENTS</title>
-    <meta name="description" content="Comprehensive event planning services in Kenya including weddings, corporate events, concerts, product launches, and brand activations.">
-    <meta name="keywords" content="event planning services Kenya, wedding planners, corporate event management, concert organizers Kenya, product launch specialists">
+    <title>Event Planning Services in Kenya | WE GOT YOU EVENTS</title>
+    <meta name="description" content="Comprehensive event planning services in Kenya including weddings, corporate events, concerts, and product launches. Professional event management for unforgettable experiences.">
+    <meta name="keywords" content="event planning services Nairobi, wedding planners Kenya, corporate event management, concert organizers Mombasa, product launch specialists">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://wegotyoueventske.com/services.html" />
+    <link rel="canonical" href="https://wegotyoueventske.com/services" />
     
-    <!-- Favicon -->
-    <link rel="icon" href="assets/wgye.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="assets/wgye.png">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="styles.css" as="style">
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wegotyoueventske.com/services.html">
-    <meta property="og:title" content="Our Services | WE GOT YOU EVENTS">
-    <meta property="og:description" content="Comprehensive event planning services in Kenya including weddings, corporate events, concerts, product launches, and brand activations.">
-    <meta property="og:image" content="https://wegotyoueventske.com/assets/product-launch.jpg">
-    <meta property="og:site_name" content="We Got You Events">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://wegotyoueventske.com/services.html">
-    <meta property="twitter:title" content="Our Services | WE GOT YOU EVENTS">
-    <meta property="twitter:description" content="Comprehensive event planning services in Kenya including weddings, corporate events, concerts, product launches, and brand activations.">
-    <meta property="twitter:image" content="https://wegotyoueventske.com/assets/product-launch.jpg">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Event Planning Services in Kenya | WE GOT YOU EVENTS" />
+    <meta property="og:description" content="Comprehensive event planning services in Kenya including weddings, corporate events, concerts, and product launches." />
+    <meta property="og:image" content="https://wegotyoueventske.com/assets/product-launch.webp" />
+    <meta property="og:url" content="https://wegotyoueventske.com/services" />
+    <meta property="og:type" content="website" />
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
-    <!-- End Google Tag Manager -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Event Planning Services in Kenya | WE GOT YOU EVENTS" />
+    <meta name="twitter:description" content="Comprehensive event planning services in Kenya including weddings, corporate events, concerts, and product launches." />
+    <meta name="twitter:image" content="https://wegotyoueventske.com/assets/product-launch.webp" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZL3M77PVW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2ZL3M77PVW');
+    </script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254725225036?text=Hi%20We%20Got%20You%20Events,%20I'm%20interested%20in%20your%20services" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="assets/wgye.png" alt="We Got You Events Logo" class="logo-img" loading="lazy">
+                <img src="assets/logo.svg" alt="We Got You Events Logo" class="logo-img" width="120" height="40" loading="eager">
             </a>
-            <div class="hamburger">
+            <div class="hamburger" aria-label="Mobile menu" aria-expanded="false">
                 <div class="line line1"></div>
                 <div class="line line2"></div>
                 <div class="line line3"></div>
@@ -74,7 +71,7 @@
     </header>
 
     <!-- Services Hero Section -->
-    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/product-launch.jpg');">
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/product-launch.webp');">
         <div class="container">
             <div class="hero-content">
                 <h1>Our <span class="text-primary">Services</span></h1>
@@ -87,16 +84,18 @@
     <section>
         <div class="container">
             <h2 class="section-title">Complete Event Solutions</h2>
-            <p class="section-subtitle">
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 50px">
                 From initial concept to flawless execution, we offer a full range of
-                event management services to meet every need.
+                event management services to meet every need. Whether you're planning
+                a corporate conference, dream wedding, or product launch, we've got
+                you covered.
             </p>
 
             <div class="services-grid">
                 <!-- Service 1 -->
-                <div class="service-card">
+                <div class="service-card" id="corporate">
                     <div class="service-image">
-                        <img src="assets/corporate-event.jpg" alt="Corporate Events" loading="lazy">
+                        <img src="assets/corporate-event.webp" alt="Corporate event planning and management services in Kenya" loading="lazy" width="400" height="300">
                         <div class="service-overlay"></div>
                     </div>
                     <div class="service-content">
@@ -111,7 +110,12 @@
                             <li>Product launches</li>
                             <li>Corporate gala dinners</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+                        <div class="service-buttons">
+                            <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+                            <a href="https://wa.me/254725225036?text=Hi%20We%20Got%20You%20Events,%20I'm%20interested%20in%20your%20corporate%20event%20services" class="btn whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Chat Now
+                            </a>
+                        </div>
                     </div>
                     <div class="service-badge">
                         <i class="fas fa-briefcase"></i>
@@ -119,9 +123,9 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="service-card">
+                <div class="service-card" id="weddings">
                     <div class="service-image">
-                        <img src="assets/event-pic-1.jpg" alt="Weddings" loading="lazy">
+                        <img src="assets/wedding-event.webp" alt="Wedding planning and coordination services in Nairobi" loading="lazy" width="400" height="300">
                         <div class="service-overlay"></div>
                     </div>
                     <div class="service-content">
@@ -136,7 +140,12 @@
                             <li>Vendor coordination</li>
                             <li>Day-of coordination</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+                        <div class="service-buttons">
+                            <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+                            <a href="https://wa.me/254725225036?text=Hi%20We%20Got%20You%20Events,%20I'm%20interested%20in%20your%20wedding%20planning%20services" class="btn whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Chat Now
+                            </a>
+                        </div>
                     </div>
                     <div class="service-badge">
                         <i class="fas fa-ring"></i>
@@ -144,9 +153,9 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="service-card">
+                <div class="service-card" id="concerts">
                     <div class="service-image">
-                        <img src="assets/concert.jpg" alt="Concerts" loading="lazy">
+                        <img src="assets/concert-event.webp" alt="Concert and festival management services in Kenya" loading="lazy" width="400" height="300">
                         <div class="service-overlay"></div>
                     </div>
                     <div class="service-content">
@@ -161,7 +170,12 @@
                             <li>Crowd management</li>
                             <li>Production coordination</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+                        <div class="service-buttons">
+                            <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+                            <a href="https://wa.me/254725225036?text=Hi%20We%20Got%20You%20Events,%20I'm%20interested%20in%20your%20concert%20management%20services" class="btn whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Chat Now
+                            </a>
+                        </div>
                     </div>
                     <div class="service-badge">
                         <i class="fas fa-music"></i>
@@ -169,9 +183,9 @@
                 </div>
 
                 <!-- Service 4 -->
-                <div class="service-card">
+                <div class="service-card" id="launches">
                     <div class="service-image">
-                        <img src="assets/product-launch.jpg" alt="Product Launch" loading="lazy">
+                        <img src="assets/product-launch.webp" alt="Product launch event services in Nairobi" loading="lazy" width="400" height="300">
                         <div class="service-overlay"></div>
                     </div>
                     <div class="service-content">
@@ -186,7 +200,12 @@
                             <li>Media coordination</li>
                             <li>Brand activation</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+                        <div class="service-buttons">
+                            <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+                            <a href="https://wa.me/254725225036?text=Hi%20We%20Got%20You%20Events,%20I'm%20interested%20in%20your%20product%20launch%20services" class="btn whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Chat Now
+                            </a>
+                        </div>
                     </div>
                     <div class="service-badge">
                         <i class="fas fa-rocket"></i>
@@ -194,9 +213,9 @@
                 </div>
 
                 <!-- Service 5 -->
-                <div class="service-card">
+                <div class="service-card" id="galas">
                     <div class="service-image">
-                        <img src="assets/gala-dinner.jpg" alt="Gala Dinners" loading="lazy">
+                        <img src="assets/gala-dinner.webp" alt="Gala dinner and award ceremony planning in Kenya" loading="lazy" width="400" height="300">
                         <div class="service-overlay"></div>
                     </div>
                     <div class="service-content">
@@ -211,7 +230,12 @@
                             <li>Catering coordination</li>
                             <li>Awards presentation</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+                        <div class="service-buttons">
+                            <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+                            <a href="https://wa.me/254725225036?text=Hi%20We%20Got%20You%20Events,%20I'm%20interested%20in%20your%20gala%20dinner%20services" class="btn whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Chat Now
+                            </a>
+                        </div>
                     </div>
                     <div class="service-badge">
                         <i class="fas fa-utensils"></i>
@@ -219,9 +243,9 @@
                 </div>
 
                 <!-- Service 6 -->
-                <div class="service-card">
+                <div class="service-card" id="branding">
                     <div class="service-image">
-                        <img src="assets/event-pic-2.jpg" alt="Brand Activation" loading="lazy">
+                        <img src="assets/brand-activation.webp" alt="Brand activation and experiential marketing services" loading="lazy" width="400" height="300">
                         <div class="service-overlay"></div>
                     </div>
                     <div class="service-content">
@@ -236,7 +260,12 @@
                             <li>Consumer engagement</li>
                             <li>ROI measurement</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+                        <div class="service-buttons">
+                            <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+                            <a href="https://wa.me/254725225036?text=Hi%20We%20Got%20You%20Events,%20I'm%20interested%20in%20your%20brand%20activation%20services" class="btn whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Chat Now
+                            </a>
+                        </div>
                     </div>
                     <div class="service-badge">
                         <i class="fas fa-bullhorn"></i>
@@ -250,9 +279,6 @@
     <section style="background-color: var(--gray)">
         <div class="container">
             <h2 class="section-title">Our Process</h2>
-            <p class="section-subtitle">
-                Our proven methodology ensures flawless execution from concept to completion
-            </p>
             <div class="process-grid">
                 <div class="process-card">
                     <div class="process-number">1</div>
@@ -291,14 +317,19 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('assets/event\ pic\ 7.jpg');">
+    <section class="cta" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('assets/wedding-event-2.webp');">
         <div class="container">
             <h2>Let's Discuss Your Event Needs</h2>
             <p>
                 Contact us today to learn more about how we can help create your
                 perfect event.
             </p>
-            <a href="contact.html" class="btn pulse">Get a Quote</a>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn pulse">Get a Quote</a>
+                <a href="tel:+254725225036" class="btn btn-outline">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
         </div>
     </section>
 
@@ -308,7 +339,7 @@
             <div class="footer-container">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <img src="assets/wgye.png" alt="We Got You Events Logo" loading="lazy">
+                        <img src="assets/logo.svg" alt="We Got You Events Logo" loading="lazy" width="120" height="40">
                     </div>
                     <p>
                         Creating exceptional events that inspire, engage, and leave
@@ -316,9 +347,9 @@
                         what matters most.
                     </p>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/share/1D2VXK6SXv/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/wegotyoueventske" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="http://tiktok.com/@wegotyou.events" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/share/1D2VXK6SXv/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/wegot.youevents?igsh=OGU2aTJwcjdnNmp3" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="http://tiktok.com/@wegotyou.events" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -334,10 +365,10 @@
                 <div class="footer-links">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="services.html">Corporate Events</a></li>
-                        <li><a href="services.html">Weddings</a></li>
-                        <li><a href="services.html">Conferences</a></li>
-                        <li><a href="services.html">Product Launches</a></li>
+                        <li><a href="services.html#corporate">Corporate Events</a></li>
+                        <li><a href="services.html#weddings">Weddings</a></li>
+                        <li><a href="services.html#concerts">Concerts</a></li>
+                        <li><a href="services.html#launches">Product Launches</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -346,24 +377,24 @@
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <p>Nairobi, Kenya</p>
+                        <p>Westlands, Nairobi, Kenya</p>
                     </div>
                     <div class="contact-detail">
                         <div class="contact-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
-                        <p>+254 725 225 036</p>
+                        <p><a href="tel:+254725225036">+254 725 225 036</a></p>
                     </div>
                     <div class="contact-detail">
                         <div class="contact-icon mail-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <p>info@wegotyoueventske.com</p>
+                        <p><a href="mailto:info@wegotyoueventske.com">info@wegotyoueventske.com</a></p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> We Got You Events. All Rights Reserved.</p>
+                <p>&copy; <span id="current-year"></span> We Got You Events. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

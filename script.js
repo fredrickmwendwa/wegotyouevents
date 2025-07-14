@@ -5,12 +5,15 @@ const navMenu = document.querySelector('.nav-menu');
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !isExpanded);
 });
 
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
     });
 });
 
@@ -33,7 +36,7 @@ const animateOnScroll = () => {
         });
     }, {
         threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: '0px 0px -50px 0px'
     });
 
     elements.forEach(element => {
@@ -67,7 +70,7 @@ filterBtns.forEach(btn => {
                 }, 50);
             } else {
                 item.style.opacity = '0';
-                item.style.transform = 'translateY(50px)';
+                item.style.transform = 'translateY(30px)';
                 setTimeout(() => {
                     item.style.display = 'none';
                 }, 300);
@@ -149,7 +152,7 @@ if (heroVideo) {
     // Ensure video plays when tab becomes active
     document.addEventListener('visibilitychange', () => {
         if (document.visibilityState === 'visible') {
-            heroVideo.play();
+            heroVideo.play().catch(e => console.log('Video play failed:', e));
         } else {
             heroVideo.pause();
         }
@@ -162,9 +165,42 @@ if (heroVideo) {
 }
 
 // Set current year in footer
-document.getElementById('currentYear').textContent = new Date().getFullYear();
+document.getElementById('current-year').textContent = new Date().getFullYear();
 
 // Initialize animations on page load
 document.addEventListener('DOMContentLoaded', () => {
     animateOnScroll();
+    
+    // Lazy load images
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    if ('loading' in HTMLImageElement.prototype) {
+        // Native lazy loading is supported
+        lazyImages.forEach(img => {
+            if (img.complete && img.naturalHeight !== 0) {
+                img.classList.add('loaded');
+            } else {
+                img.addEventListener('load', () => {
+                    img.classList.add('loaded');
+                });
+            }
+        });
+    } else {
+        // Fallback for browsers without native lazy loading
+        const lazyLoadObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    lazyLoadObserver.unobserve(img);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => {
+            img.dataset.src = img.src;
+            img.src = '';
+            lazyLoadObserver.observe(img);
+        });
+    }
 });
